@@ -23,8 +23,8 @@ class _MyAppState extends State<MyApp> {
           title: const Text('First day of the week example'),
         ),
         body: Center(
-          child:
-              Text('first day of week on phone: ${FirstDayOfTheWeek.value}\n'),
+          child: Text(
+              'first day of week on phone: ${FirstDayOfTheWeek.value?.name}\n'),
         ),
       ),
     );

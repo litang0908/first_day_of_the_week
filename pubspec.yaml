@@ -1,6 +1,6 @@
 name: first_day_of_the_week
 description: Flutter plugin for getting system's first day of the week.
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/Nizlan/first_day_of_the_week
 
 environment:
@@ -38,6 +38,8 @@ flutter:
         package: com.example.first_day_of_the_week
         pluginClass: FirstDayOfTheWeekPlugin
       ios:
+        pluginClass: FirstDayOfTheWeekPlugin
+      macos:
         pluginClass: FirstDayOfTheWeekPlugin
 
   # To add assets to your plugin package, add an assets section, like this:

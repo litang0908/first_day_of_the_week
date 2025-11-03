@@ -1,12 +1,12 @@
 
 # first_day_of_the_week
 
-`first_day_of_the_week` is a Flutter plugin that allows you to retrieve the system's first day of the week on both Android and iOS. This can be particularly useful for calendar and scheduling applications.
+`first_day_of_the_week` is a Flutter plugin to retrieve the system's first day of the week. It supports Android, iOS, and macOS. Useful for calendar and scheduling apps.
 
 ## Features
 
 - Get the system's first day of the week.
-- Supports both Android and iOS platforms.
+- Supports Android, iOS, and macOS.
 
 ## Installation
 
@@ -25,7 +25,7 @@ flutter pub get
 
 ## Usage
 
-First, ensure you initialize the plugin by calling the `init` method. This will retrieve and set the first day of the week from the system.
+Call `init` first, then read `FirstDayOfTheWeek.value`. The return type is the enum `FirstWeekday?` for better readability:
 
 ```dart
 import 'package:first_day_of_the_week/first_day_of_the_week.dart';
@@ -37,24 +37,24 @@ void main() async {
   await FirstDayOfTheWeek.init();
 
   // Access the first day of the week
-  int? firstDay = FirstDayOfTheWeek.value;
-  print("The first day of the week is: $firstDay");
+  final firstDay = FirstDayOfTheWeek.value; // FirstWeekday?
+  print("The first day of the week is: ${firstDay?.name}");
 
   runApp(MyApp());
 }
 ```
 
-### Day of the Week Mapping
+### Enum: FirstWeekday
 
-The days of the week are represented as follows:
+Values:
 
-- 1 - Sunday
-- 2 - Monday
-- 3 - Tuesday
-- 4 - Wednesday
-- 5 - Thursday
-- 6 - Friday
-- 7 - Saturday
+- sunday
+- monday
+- tuesday
+- wednesday
+- thursday
+- friday
+- saturday
 
 ## Example
 
@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            'The first day of the week is: ${FirstDayOfTheWeek.value}',
+            'The first day of the week is: ${FirstDayOfTheWeek.value?.name}',
             style: TextStyle(fontSize: 24),
           ),
         ),
@@ -98,3 +98,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+

@@ -8,8 +8,8 @@ class MockFirstDayOfTheWeekPlatform
     with MockPlatformInterfaceMixin
     implements FirstDayOfTheWeekPlatform {
   @override
-  Future<int?> get() {
-    return Future<int?>.value(1);
+  Future<FirstWeekday?> get() {
+    return Future<FirstWeekday?>.value(FirstWeekday.sunday);
   }
 }
 
@@ -28,6 +28,6 @@ void main() {
 
     await FirstDayOfTheWeek.init();
 
-    expect(FirstDayOfTheWeek.value, 1);
+    expect(FirstDayOfTheWeek.value, FirstWeekday.sunday);
   });
 }

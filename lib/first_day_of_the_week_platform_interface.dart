@@ -1,6 +1,7 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'first_day_of_the_week_method_channel.dart';
+import 'src/types.dart';
 
 abstract class FirstDayOfTheWeekPlatform extends PlatformInterface {
   /// Constructs a FirstDayOfTheWeekPlatform.
@@ -23,7 +24,7 @@ abstract class FirstDayOfTheWeekPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<int?> get() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<FirstWeekday?> get() {
+    throw UnimplementedError('get() has not been implemented.');
   }
 }
