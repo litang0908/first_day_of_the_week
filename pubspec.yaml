@@ -4,7 +4,7 @@ version: 1.1.0
 homepage: https://github.com/Nizlan/first_day_of_the_week
 
 environment:
-  sdk: ^3.5.0
+  sdk: ^3.4.0
   flutter: '>=3.3.0'
 
 dependencies:
@@ -40,6 +40,8 @@ flutter:
       ios:
         pluginClass: FirstDayOfTheWeekPlugin
       macos:
+        pluginClass: FirstDayOfTheWeekPlugin
+      ohos:
         pluginClass: FirstDayOfTheWeekPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
